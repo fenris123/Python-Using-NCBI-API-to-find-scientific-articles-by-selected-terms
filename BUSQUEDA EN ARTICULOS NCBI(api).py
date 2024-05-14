@@ -51,7 +51,7 @@ except:
 
 
 #   ESTO COGE LA URL, LA LEE, USA ET PARA FORMAR LOS ARBOLES, Y 
-#   VOY A LAS HOJAS "RECORDS/RECORD"
+#   VOY A LAS HOJAS "./IdList/Id"
 
 try:
     print("Consultando la web ", url, ". Espere, por favor.")
