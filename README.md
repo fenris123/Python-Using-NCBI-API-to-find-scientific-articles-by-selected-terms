@@ -9,8 +9,12 @@ You can specify if you want that to search only in the title or not.
 
 It uses pubmed database of NCBI because it is the most popular.  It could be changed
 
-You can fix the maximun number of results expected. (the API accpets a maximun, 10.000)
+You can fix the maximun number of results expected. (Maximun 200)
 
-The results will show the pubmed ID of every article, and the URL of that article.
+WARNING:  There could be more  articles. This program will only show you a maximun of 200 articles
+Try to adjust your terms to refine the search or you can be missing too much information.
 
-Probably i will ad the title of the article in a future version, but this is just a personal proyect to learn.
+
+The results will show the pubmed ID, Title, Authors, and other usefull information of the scientific articles. of every article, and the URL of that article.
+
+
