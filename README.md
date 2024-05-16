@@ -1,6 +1,11 @@
 # Python-Using-NCBI-API-to-find-scientific-articles-by-selected-terms
 With this python file  you cand find all the scientific papers in Pubmed that match your search terms.
 
+WARNING:
+IT REQUIRES PANDAS LIBRARY
+
+if you dont have it installed, execute pip install pandas
+
 
 
 This file uses the NCBI API to look of scinctific articles in pubmed that match the selected search terms.  
