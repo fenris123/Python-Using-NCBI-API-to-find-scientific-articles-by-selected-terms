@@ -76,7 +76,7 @@ try:
         
         for hoja in hojas:
             pubmedID = hoja.text
-            direccionweb= "https://pubmed.ncbi.nlm.nih.gov/" + pubmedID   ###### ESTO LO PASAREMOS A ABAJO
+            direccionweb= "https://pubmed.ncbi.nlm.nih.gov/" + pubmedID   
             ListaID.append(pubmedID)
             
 except Exception as error_parteuno:
@@ -122,9 +122,11 @@ try:
         Publicacion = hojas.find("./Item[@Name='Source']").text
         Fecha =  hojas.find("./Item[@Name='PubDate']").text
         Citas_en_PMC = hojas.find("./Item[@Name='PmcRefCount']").text
+        Web_pubmed = "https://pubmed.ncbi.nlm.nih.gov/" + Pubmed_id 
+        
         
         # Agregar los datos del artículo a la lista
-        Tabla_datos.append([Pubmed_id, Titulo, ', '.join(Autores), Publicacion, Fecha, Citas_en_PMC])
+        Tabla_datos.append([Pubmed_id, Titulo, ', '.join(Autores), Publicacion, Fecha, Citas_en_PMC, Web_pubmed])
         
       
 except Exception as error_partedos:
@@ -139,7 +141,7 @@ if Tabla_datos == []:
     
     
 # Crear un DataFrame de pandas con los datos
-data_frame = pd.DataFrame(Tabla_datos, columns=['PubMed ID', 'Título', 'Autores', 'Publicación', 'Fecha', 'Citas en PMC'])   
+data_frame = pd.DataFrame(Tabla_datos, columns=["PubMed ID", "Título", "Autores", "Publicación", "Fecha", "Citas en PMC","Web pubmed"])   
     
 directorio = input("Inserte el directorio donde se va a guardar el archivo\n(por ejemplo, C:/Usuarios/TuUsuario/Documentos): ").strip()
 nombre_archivo = input("Inserte el nombre del archivo (sin la extensión .xlsx): ").strip()
